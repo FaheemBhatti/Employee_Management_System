@@ -30,9 +30,9 @@ public class EmployeeController
 	@RequestMapping(value = "/addEmployee" , 
 			method = RequestMethod.POST,
 			consumes = MediaType.APPLICATION_JSON_VALUE)
-	public void addPost(@RequestBody Employee employee)
+	public Employee addEmployee(@RequestBody Employee employee)
 	{
-		service.addEmployee(employee);
+		return service.addEmployee(employee);
 	}
 	
 	@RequestMapping(value = "/updateEmployee", 
