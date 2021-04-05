@@ -27,7 +27,6 @@ export class UpdateEmployeeComponent implements OnInit {
   }
   
   updateEmployee(){
-    
     this.employeeService.updateEmployee(this.id , this.employee).subscribe(data =>{
       console.log(data);
     })
@@ -41,5 +40,4 @@ export class UpdateEmployeeComponent implements OnInit {
   onSubmit(){
     this.updateEmployee();
   }
-
 }
